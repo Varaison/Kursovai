@@ -1,0 +1,21 @@
+.imground {
+	width: 50%;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 0.4em;
+}
+
+.backgr {
+    background-image: url("../images/phonesite.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#footer {
+	background: #000;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	padding: 20px;
+}

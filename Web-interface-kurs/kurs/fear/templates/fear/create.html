@@ -1,0 +1,15 @@
+{% extends "fear/base.html" %}
+
+{% block title %}Добавление услуги{% endblock %}
+
+{% block content %}
+<div class="card shadow-lg p-3 bg-dark rounded fw-bold text-white row col-6 mx-auto">
+    <p><h2>Добавление услуги</h2></p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" value="Добавить">
+        <img class="imground" src="static/fear/images/{{ sc.photo }}" alt="{{ sc.name }}">
+    </form>
+</div>
+{% endblock %}

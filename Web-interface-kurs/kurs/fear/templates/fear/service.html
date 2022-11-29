@@ -1,0 +1,22 @@
+{% extends 'fear/base.html' %}
+
+{% block content %}
+<div class="col">
+    <div class="card text-bg-dark p-3 text-center row col-5 mx-auto">
+        <h1>{{ service.name }}</h1>
+        <p><img class="card-img-top imground" width="300" height="300" src="{{ service.photo.url }}" alt="{{ sc.name }}"></p>
+        <h5 class="card-title">{{ service.content }}</h5>
+        <h5 class="card-text">Цена: {{ service.price }} руб.</h5></p>
+        <p>
+            <input class="btn btn-primary" type="submit" value="Добавить в корзину">
+        </p>
+        {% if not user.is_authenticated %}
+        {% else %}
+        <p>
+            <a class="btn btn-primary" href="{% url 'update' service.slug %}">Редактировать</a>
+        </p>
+        {% endif %}
+        <p class="first ">Категория: {{service.cat}}</p>
+    </div>
+</div>
+{% endblock %}

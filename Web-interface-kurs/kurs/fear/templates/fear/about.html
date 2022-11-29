@@ -1,0 +1,21 @@
+{% extends 'fear/base.html' %}
+{% block content %}
+<div class="card shadow-lg p-3 bg-dark rounded text-white col-8 mx-auto row">
+    <h1 class="text-center">Музыкальная студия</h1>
+    <p class="text-center">Предоставляем множество услуг, которые помогут вам приблизиться к мировым музыкальным величинам.</p>
+    <h4>{{ title }}</h4>
+    <p><a href="https://vk.com/varaison_den" target="_blank" class="me-3 text-decoration-none fa">
+        <img src="static/fear/images/VK.png" class="me-2" width="40" height="40" alt="VK">Вконтакте
+    </a></p>
+    <p><a href="https://www.youtube.com/channel/UCZS_2jh41AoLtPgZJQmbV5A" target="_blank" class="me-3 text-decoration-none fa">
+        <img src="static/fear/images/Youtube.png" class="me-2" width="40" height="40" alt="YouTube">YouTube
+    </a></p>
+    <p><a href="tel:+79525548260" target="_blank" class="me-3 text-decoration-none fa">
+        <img src="static/fear/images/Phone.png" alt="Phone" width="40" height="40" class="me-2">89525528260</a></p>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa29eac70242909ca70dd016de8bded98f489db92afd7d7f27bdee38eb1ad58b1&amp;width=353&amp;height=353&amp;lang=ru_RU&amp;scroll=true">
+    </script>
+    <a href="https://yandex.ru/maps/193/voronezh/house/leninskiy_prospekt_39/Z0AYdARnSUQOQFtrfXp1dH1hbQ==/?ll=39.237028%2C51.645380&z=18.72" target="_blank" class="me-3 py-3 text-decoration-none fa">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>Воронеж, Ленинский проспект 39
+    </a>
+</div>
+{% endblock %}

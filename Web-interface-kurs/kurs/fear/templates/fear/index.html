@@ -1,0 +1,22 @@
+{% extends 'fear/base.html' %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+    {% for sc in service %}
+<div class="col">
+    <div class="card text-bg-dark p-3 text-center">
+        <p><h4>{{ sc.name }}</h4>
+        <img class="card-img-top imground" width="300" height="300" src="{{ sc.photo.url }}" alt="{{ sc.name }}">
+        <h5 class="card-title">{{ sc.content|linebreaks|truncatewords:10 }}</h5>
+        <h5 class="card-text">Цена: {{ sc.price }} руб.</h5></p>
+        <p>
+            <a href="{{ sc.get_absolute_url }}" class="btn btn-primary">Подробнее</a>
+        </p>
+        <p>
+            <input class="btn btn-primary" type="submit" value="Добавить в корзину">
+        </p>
+        <p class="first ">Категория: {{sc.cat}}</p>
+    </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
